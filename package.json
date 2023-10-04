@@ -1,24 +1,52 @@
 {
-  "name": "mantine-ready-tp-use-form",
+  "name": "mantine-ready-to-use-form",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "prepare": "husky install",
+    "lint": "next lint",
+    "lint:fix": "eslint src --fix && yarn format",
+    "lint:strict": "eslint --max-warnings=0 src",
+    "typecheck": "tsc --noEmit --incremental false",
+    "format": "prettier -w ."
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/server": "^11.11.0",
+    "@mantine/core": "^6.0.21",
+    "@mantine/form": "^6.0.21",
+    "@mantine/hooks": "^6.0.21",
+    "@mantine/next": "^6.0.21",
+    "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "13.5.4"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
     "eslint": "^8",
-    "eslint-config-next": "13.5.4"
+    "eslint-config-next": "13.5.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0 --fix",
+      "prettier -w"
+    ],
+    "**/*.{json,css,scss,md}": [
+      "prettier -w"
+    ]
   }
 }
