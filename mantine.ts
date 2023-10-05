@@ -52,17 +52,17 @@ export const theme: MantineProviderProps["theme"] = {
   },
   headings: {
     // properties for all headings
-    fontWeight: "400",
+    fontWeight: "600",
     fontFamily: "Inter, sans-serif",
 
     // properties for individual headings, all of them are optional
     sizes: {
-      h1: { fontSize: "2rem" },
-      h2: { fontSize: "1.6rem" },
+      h1: { fontSize: "1.7rem" },
+      h2: { fontSize: "1.5rem" },
       h3: { fontSize: "1.4rem" },
       h4: { fontSize: "1.2rem" },
-      h5: { fontSize: "1rem" },
-      h6: { fontSize: "0.9rem" },
+      h5: { fontSize: "1.1rem" },
+      h6: { fontSize: "1rem" },
     },
   },
 };

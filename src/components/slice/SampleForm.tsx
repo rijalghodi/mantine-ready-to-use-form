@@ -42,18 +42,12 @@ export function SampleForm() {
 
   return (
     <Container size={1200} my={40}>
-      <Title
-        align="center"
-        sx={(theme) => ({
-          fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-          fontWeight: 900,
-        })}
-      >
+      <Title align="center" order={1} fw={700}>
         Sample Form
       </Title>
       <Group noWrap>
         <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-          <Title order={3} mb={20} align="center">
+          <Title order={2} mb={20} align="center">
             With Render Props
           </Title>
           {/* eslint-disable @typescript-eslint/no-shadow */}
@@ -74,7 +68,7 @@ export function SampleForm() {
         </Paper>
 
         <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-          <Title order={3} mb={20} align="center">
+          <Title order={2} mb={20} align="center">
             With Returned Methods
           </Title>
           <Form grid={{ gutter: "xs" }} />
